@@ -1,0 +1,23 @@
+min = None
+max = None
+while True:
+    x = input("Enter a number: ")
+    if x == "done":
+        break
+    try:
+        num1 = float(x)
+    except:
+        print("Invalid input")
+        continue
+    if min is None:
+        min = num1
+    elif min > num1:
+        min = num1
+    if max is None:
+        max = num1
+    elif max < num1:
+        max = num1
+print("Maximum number = ", max)
+print("Minimum number = ", min)
+
+
